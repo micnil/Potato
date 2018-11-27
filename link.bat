@@ -1,0 +1,1 @@
+adb shell am start -W -a android.intent.action.VIEW -d "potato://app/red/?result=success" com.potato
