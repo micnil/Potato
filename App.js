@@ -3,16 +3,15 @@ import { Platform, StyleSheet, View } from 'react-native';
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 
 class RedPotato extends Component {
-
-  componentDidUpdate() {
-    const result = this.props.navigation.getParam('result', 'failure')
-    if (result !== "failure") {
-     console.log(`componentDidUpdate: ${result}`);
-    }
-  }
+	componentDidUpdate() {
+		const result = this.props.navigation.getParam('result', 'failure');
+		if (result !== 'failure') {
+			console.log(`componentDidUpdate: ${result}`);
+		}
+	}
 
 	componentDidMount() {
-    const result = this.props.navigation.getParam('result', 'failure')
+		const result = this.props.navigation.getParam('result', 'failure');
 		console.log(`Red Mounted: ${result}`);
 	}
 
@@ -22,7 +21,6 @@ class RedPotato extends Component {
 }
 
 class BluePotato extends Component {
-
 	componentDidMount() {
 		console.log('Blue Mounted');
 	}
@@ -44,8 +42,8 @@ const AppNavigator = createSwitchNavigator(
 		},
 	},
 	{
-		initialRouteName: 'BluePotato' // Fixes issue
-		//initialRouteName: 'RedPotato',
+		//initialRouteName: 'BluePotato' // Fixes issue
+		initialRouteName: 'RedPotato',
 	},
 );
 
