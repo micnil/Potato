@@ -7,7 +7,7 @@ class RedPotato extends Component {
   componentDidUpdate() {
     const result = this.props.navigation.getParam('result', 'failure')
     if (result !== "failure") {
-     console.log(`componentDidMount: ${result}`);
+     console.log(`componentDidUpdate: ${result}`);
     }
   }
 
@@ -44,8 +44,8 @@ const AppNavigator = createSwitchNavigator(
 		},
 	},
 	{
-		// initialRouteName: 'BluePotato' // Fixes issue
-		initialRouteName: 'RedPotato',
+		initialRouteName: 'BluePotato' // Fixes issue
+		//initialRouteName: 'RedPotato',
 	},
 );
 
